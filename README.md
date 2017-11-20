@@ -1,13 +1,6 @@
 # Youtube-DL.py Windows.exe Wrapper
+
 Very basic youtube-dl.py wrapper binary written in C#.NET that makes you able to call the python script via youtube-dl.exe
-
-I got annoyed that you can not "cross compile" with pyinstaller from Linux to Windows.
-
-Meaning I couldn't build youtube-dl.exe nightly.
-
-So I made this small exe file that just relays stuff from the combined youtube-dl python script,
-which is created by running `make` in the youtube-dl git repo.
-
 
 This file can be thrown into any directory that's PATH'd in Windows, make sure youtube-dl(.py) is in the same directory.
 
@@ -24,3 +17,12 @@ C:\Python{36,35}\python.exe
 >youtube-dl.exe --version
 2017.11.15
 ```
+
+Why does this exist?:
+
+I got annoyed that you can not "cross compile" with pyinstaller from Linux to Windows.
+
+Meaning I couldn't build youtube-dl.exe nightly.
+
+So I made this small exe file that just relays stuff from the combined youtube-dl python script,
+which is created by running `make` in the youtube-dl git repo.
