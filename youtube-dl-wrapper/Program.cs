@@ -162,7 +162,6 @@ namespace youtube_dl_wrapper
             p.WaitForExit();
             p.CancelOutputRead();
             p.CancelErrorRead();
-            //Console.ReadKey();
         }
     }
 }
