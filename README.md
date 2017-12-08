@@ -4,7 +4,7 @@ Very basic youtube-dl.py wrapper binary written in C#.NET that makes you able to
 
 This file can be thrown into any directory that's PATH'd in Windows, make sure youtube-dl(.py) is in the same directory.
 
-This also requires Python3.5/3.6 to be installed.
+This also requires Python to be installed (obviously).
 
 
 It currently just checks for these paths:
