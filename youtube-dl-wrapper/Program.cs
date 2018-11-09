@@ -1,4 +1,4 @@
-﻿using Microsoft.Win32;
+using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -48,7 +48,21 @@ namespace youtube_dl_wrapper
 
 
             List<Dictionary<string, string>> pythonRegKeys = new List<Dictionary<string, string>>();
-
+			
+            pythonRegKeys.Add(
+                new Dictionary<string, string>() {
+                    { "Path", @"SOFTWARE\Python\PythonCore\3.7-32\InstallPath" },
+                    { "Dir", "HKLM" },
+                    { "Key", "ExecutablePath" },
+                }
+            );
+            pythonRegKeys.Add(
+                new Dictionary<string, string>() {
+                    { "Path", @"SOFTWARE\Python\PythonCore\3.7-32\InstallPath" },
+                    { "Dir", "HKCU" },
+                    { "Key", "ExecutablePath" },
+                }
+            );
             pythonRegKeys.Add(
                 new Dictionary<string, string>() {
                     { "Path", @"SOFTWARE\Python\PythonCore\3.6\InstallPath" },
@@ -80,6 +94,8 @@ namespace youtube_dl_wrapper
 
             string[] pythonPaths = new string[]
             {
+                @"C:\Python37\python.exe",
+                @"C:\Python37-32\python.exe",
                 @"C:\Python36\python.exe",
                 @"C:\Python35\python.exe",
             };
