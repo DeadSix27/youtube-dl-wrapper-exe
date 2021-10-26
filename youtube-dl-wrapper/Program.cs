@@ -19,6 +19,8 @@ namespace youtube_dl_wrapper
 
             string[] youtubeDlScripts = new string[]
             {
+                @"yt-dlp",
+                @"yt-dlp.py",
                 @"youtube-dl",
                 @"youtube-dl.py",
             };
@@ -50,14 +52,42 @@ namespace youtube_dl_wrapper
             List<Dictionary<string, string>> pythonRegKeys = new List<Dictionary<string, string>>();
             pythonRegKeys.Add(
                 new Dictionary<string, string>() {
-                    { "Path", @"SOFTWARE\Python\PythonCore\4.0\InstallPath" },
+                    { "Path", @"SOFTWARE\Python\PythonCore\3.12\InstallPath" },
                     { "Dir", "HKLM" },
                     { "Key", "ExecutablePath" },
                 }
             );
             pythonRegKeys.Add(
                 new Dictionary<string, string>() {
-                    { "Path", @"SOFTWARE\Python\PythonCore\4.0\InstallPath" },
+                    { "Path", @"SOFTWARE\Python\PythonCore\3.12\InstallPath" },
+                    { "Dir", "HKCU" },
+                    { "Key", "ExecutablePath" },
+                }
+            );
+            pythonRegKeys.Add(
+                new Dictionary<string, string>() {
+                    { "Path", @"SOFTWARE\Python\PythonCore\3.11\InstallPath" },
+                    { "Dir", "HKLM" },
+                    { "Key", "ExecutablePath" },
+                }
+            );
+            pythonRegKeys.Add(
+                new Dictionary<string, string>() {
+                    { "Path", @"SOFTWARE\Python\PythonCore\3.11\InstallPath" },
+                    { "Dir", "HKCU" },
+                    { "Key", "ExecutablePath" },
+                }
+            );
+            pythonRegKeys.Add(
+                new Dictionary<string, string>() {
+                    { "Path", @"SOFTWARE\Python\PythonCore\3.10\InstallPath" },
+                    { "Dir", "HKLM" },
+                    { "Key", "ExecutablePath" },
+                }
+            );
+            pythonRegKeys.Add(
+                new Dictionary<string, string>() {
+                    { "Path", @"SOFTWARE\Python\PythonCore\3.10\InstallPath" },
                     { "Dir", "HKCU" },
                     { "Key", "ExecutablePath" },
                 }
@@ -149,7 +179,10 @@ namespace youtube_dl_wrapper
 
             string[] pythonPaths = new string[]
             {
-                @"C:\Python40\python.exe",
+                @"C:\Python313\python.exe",
+                @"C:\Python312\python.exe",
+                @"C:\Python311\python.exe",
+                @"C:\Python310\python.exe",
                 @"C:\Python39\python.exe",
                 @"C:\Python38\python.exe",
                 @"C:\Python37\python.exe",
